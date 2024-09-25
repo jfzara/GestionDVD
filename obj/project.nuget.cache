@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l9N1CQU7pDY=",
+  "dgSpecHash": "7xUReausmKc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jeff\\source\\repos\\Zara_GestionDVD - Copie\\Zara_GestionDVD.csproj",
+  "projectFilePath": "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\Zara_GestionDVD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jeff\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Jeff\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

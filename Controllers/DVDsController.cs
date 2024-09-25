@@ -51,12 +51,18 @@ namespace Zara_GestionDVD.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TitreFrancais,TitreOriginal,AnneeSortie,Categorie")] DVD dVD)
+        public async Task<IActionResult> Create([Bind("Id,TitreFrancais,TitreOriginal,AnneeSortie,Categorie,DerniereMiseAJour,DerniereMiseAJourPar,DescriptionSuppléments,Duree,EstDVDOriginal,Format,ImagePochette,LanguesDisponibles,NombreDisques,NomProducteur,NomRealisateur,ActeursPrincipaux,ResumeFilm,SousTitresDisponibles,PropriétaireId,EmprunteurId,VersionEtendue,VisibleATous")] DVD dVD)
         {
-            // Vérifiez si la catégorie est valide
+            // Vérification si la catégorie est valide
             if (!GetCategories().Any(c => c.Value == dVD.Categorie))
             {
                 ModelState.AddModelError("Categorie", "La catégorie sélectionnée n'est pas valide.");
+            }
+
+        
+            if (dVD.Duree.TotalMinutes <= 0)
+            {
+                ModelState.AddModelError("Duree", "La durée doit être supérieure à zéro minutes.");
             }
 
             if (ModelState.IsValid)
