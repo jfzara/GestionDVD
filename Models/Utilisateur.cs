@@ -1,12 +1,15 @@
-﻿namespace Zara_GestionDVD.Models
+﻿using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
+
+namespace Zara_GestionDVD.Models
 {
-    public class Utilisateur
+    public class Utilisateur : IdentityUser
     {
-        public string Id { get; set; }
+        // Propriétés supplémentaires
         public string Prenom { get; set; }
-        public string Courriel { get; set; }
-        public string MotDePasse { get; set; }
         public bool NotificationsActives { get; set; }
+
+        // Relation avec les DVDs
         public List<DVD> DVDsPossedes { get; set; }
     }
 }

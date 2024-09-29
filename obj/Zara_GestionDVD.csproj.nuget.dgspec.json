@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\Zara_GestionDVD.csproj": {}
+    "C:\\Users\\Jeff\\Downloads\\20240926211059_Zara_GestionDVD_Projet (1)\\Zara_GestionDVD_Projet\\Zara_GestionDVD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\Zara_GestionDVD.csproj": {
+    "C:\\Users\\Jeff\\Downloads\\20240926211059_Zara_GestionDVD_Projet (1)\\Zara_GestionDVD_Projet\\Zara_GestionDVD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\Zara_GestionDVD.csproj",
+        "projectUniqueName": "C:\\Users\\Jeff\\Downloads\\20240926211059_Zara_GestionDVD_Projet (1)\\Zara_GestionDVD_Projet\\Zara_GestionDVD.csproj",
         "projectName": "Zara_GestionDVD",
-        "projectPath": "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\Zara_GestionDVD.csproj",
+        "projectPath": "C:\\Users\\Jeff\\Downloads\\20240926211059_Zara_GestionDVD_Projet (1)\\Zara_GestionDVD_Projet\\Zara_GestionDVD.csproj",
         "packagesPath": "C:\\Users\\Jeff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jeff\\source\\repos\\GestionDVD\\obj\\",
+        "outputPath": "C:\\Users\\Jeff\\Downloads\\20240926211059_Zara_GestionDVD_Projet (1)\\Zara_GestionDVD_Projet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

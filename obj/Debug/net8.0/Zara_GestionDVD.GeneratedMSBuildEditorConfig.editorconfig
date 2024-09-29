@@ -17,59 +17,59 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Zara_GestionDVD
 build_property.RootNamespace = Zara_GestionDVD
-build_property.ProjectDir = C:\Users\Jeff\source\repos\GestionDVD\
+build_property.ProjectDir = C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jeff\source\repos\GestionDVD
+build_property.MSBuildProjectDirectory = C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/DVDs/Create.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/DVDs/Delete.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/DVDs/Details.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/DVDs/Edit.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/DVDs/Index.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/Home/Index.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/Home/Privacy.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/Shared/Error.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/_ViewImports.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/_ViewStart.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jeff/source/repos/GestionDVD/Views/Shared/_Layout.cshtml]
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9b04jrmsf5

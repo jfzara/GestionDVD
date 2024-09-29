@@ -1,12 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Zara_GestionDVD.Data;
+using Zara_GestionDVD.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Ajouter les services pour les contrôleurs et les vues
 builder.Services.AddControllersWithViews();
 
+// Configurer le DbContext avec SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Ajouter Identity pour gérer l'authentification des utilisateurs
+builder.Services.AddIdentity<Utilisateur, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -21,6 +30,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Ajouter l'authentification et l'autorisation
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
