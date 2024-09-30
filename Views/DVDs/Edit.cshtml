@@ -58,9 +58,13 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Duree" class="control-label"></label>
-                <input asp-for="Duree" class="form-control" />
-                <span asp-validation-for="Duree" class="text-danger"></span>
+                <label>Duree (heures et minutes)</label>
+                <div class="d-flex">
+                    <input type="number" name="DureeHeures" class="form-control" value="@Model.DureeHeures" min="0" />
+                    <input type="number" name="DureeMinutes" class="form-control" value="@Model.DureeMinutes" min="0" max="59" />
+                </div>
+                <span class="text-danger" asp-validation-for="DureeHeures"></span>
+                <span class="text-danger" asp-validation-for="DureeMinutes"></span>
             </div>
 
             <div class="form-group form-check">
@@ -149,7 +153,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Retour à la liste</a>
+    <a class="btn btn-secondary" asp-action="Index">Retour à la liste</a>
 </div>
 
 @section Scripts {

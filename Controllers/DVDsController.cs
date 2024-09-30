@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,19 +11,29 @@ using Zara_GestionDVD.Models;
 
 namespace Zara_GestionDVD.Controllers
 {
+    [Authorize]
     public class DVDsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly string _logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", "errorLog.txt");
 
         public DVDsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        // Méthode pour enregistrer les logs d'erreur
+        private void LogError(string message)
+        {
+            var logMessage = $"{DateTime.Now}: {message}{Environment.NewLine}";
+            System.IO.File.AppendAllText(_logFilePath, logMessage);
+        }
+
         // GET: DVDs
         public async Task<IActionResult> Index()
         {
             ViewBag.Categories = GetCategories();
+            
             return View(await _context.DVDs.ToListAsync());
         }
 
@@ -31,39 +42,31 @@ namespace Zara_GestionDVD.Controllers
         {
             if (id == null)
             {
+                LogError("ID du DVD est nul dans la méthode Details.");
                 return NotFound();
             }
 
             var dVD = await _context.DVDs.FirstOrDefaultAsync(m => m.Id == id);
             if (dVD == null)
             {
+                LogError($"Aucun DVD trouvé avec l'ID {id} dans la méthode Details.");
                 return NotFound();
             }
 
             return View(dVD);
         }
-
+        // GET: DVDs/Create
         public IActionResult Create()
         {
-            ViewBag.Categories = GetCategories();
-            return View(new DVD());
+            ViewBag.Categories = GetCategories(); // Charger les catégories
+            return View();
         }
 
+        // POST: DVDs/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TitreFrancais,TitreOriginal,AnneeSortie,Categorie,DerniereMiseAJour,DerniereMiseAJourPar,DescriptionSuppléments,Duree,EstDVDOriginal,Format,ImagePochette,LanguesDisponibles,NombreDisques,NomProducteur,NomRealisateur,ActeursPrincipaux,ResumeFilm,SousTitresDisponibles,PropriétaireId,EmprunteurId,VersionEtendue,VisibleATous")] DVD dVD)
+        public async Task<IActionResult> Create([Bind("TitreFrancais,TitreOriginal,AnneeSortie,Categorie,DerniereMiseAJour,DerniereMiseAJourPar,DescriptionSuppléments,Duree,EstDVDOriginal,Format,LanguesDisponibles,NombreDisques,NomProducteur,NomRealisateur,ActeursPrincipaux,ResumeFilm,SousTitresDisponibles,PropriétaireId,EmprunteurId,VersionEtendue,VisibleATous")] DVD dVD)
         {
-            // Vérification si la catégorie est valide
-            if (!GetCategories().Any(c => c.Value == dVD.Categorie))
-            {
-                ModelState.AddModelError("Categorie", "La catégorie sélectionnée n'est pas valide.");
-            }
-
-            if (dVD.Duree.TotalMinutes <= 0)
-            {
-                ModelState.AddModelError("Duree", "La durée doit être supérieure à zéro minutes.");
-            }
-
             if (ModelState.IsValid)
             {
                 _context.Add(dVD);
@@ -71,11 +74,9 @@ namespace Zara_GestionDVD.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewBag.Categories = GetCategories();
+            ViewBag.Categories = GetCategories(); // Recharger les catégories en cas d'erreur
             return View(dVD);
         }
-
-
         private List<SelectListItem> GetCategories()
         {
             return new List<SelectListItem>
@@ -139,12 +140,14 @@ namespace Zara_GestionDVD.Controllers
         {
             if (id == null)
             {
+                LogError("ID du DVD est nul dans la méthode Edit (GET).");
                 return NotFound();
             }
 
             var dVD = await _context.DVDs.FindAsync(id);
             if (dVD == null)
             {
+                LogError($"Aucun DVD trouvé avec l'ID {id} dans la méthode Edit (GET).");
                 return NotFound();
             }
             ViewBag.Categories = GetCategories();
@@ -158,6 +161,7 @@ namespace Zara_GestionDVD.Controllers
         {
             if (id != dVD.Id)
             {
+                LogError($"L'ID du DVD ne correspond pas dans la méthode Edit (POST) : attendu {id}, reçu {dVD.Id}.");
                 return NotFound();
             }
 
@@ -172,11 +176,13 @@ namespace Zara_GestionDVD.Controllers
                 {
                     if (!DVDExists(dVD.Id))
                     {
+                        LogError($"Aucune entrée trouvée lors de la mise à jour du DVD avec l'ID {dVD.Id} dans la méthode Edit (POST).");
                         return NotFound();
                     }
                     else
                     {
-                        throw;
+                        LogError($"Erreur de concurrence lors de la mise à jour du DVD avec l'ID {dVD.Id} dans la méthode Edit (POST).");
+                        throw; // Relancer l'exception après l'avoir loguée
                     }
                 }
                 return RedirectToAction(nameof(Index));
@@ -186,6 +192,7 @@ namespace Zara_GestionDVD.Controllers
             return View(dVD);
         }
 
+        // Méthode pour vérifier si un DVD existe
         private bool DVDExists(int id)
         {
             return _context.DVDs.Any(e => e.Id == id);
@@ -196,12 +203,14 @@ namespace Zara_GestionDVD.Controllers
         {
             if (id == null)
             {
+                LogError("ID du DVD est nul dans la méthode Delete (GET).");
                 return NotFound();
             }
 
             var dVD = await _context.DVDs.FirstOrDefaultAsync(m => m.Id == id);
             if (dVD == null)
             {
+                LogError($"Aucun DVD trouvé avec l'ID {id} dans la méthode Delete (GET).");
                 return NotFound();
             }
 
@@ -214,11 +223,17 @@ namespace Zara_GestionDVD.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var dVD = await _context.DVDs.FindAsync(id);
+            if (dVD == null)
+            {
+                LogError($"Aucun DVD trouvé avec l'ID {id} lors de la tentative de suppression dans la méthode DeleteConfirmed (POST).");
+                return NotFound();
+            }
+
             _context.DVDs.Remove(dVD);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-       
+
     }
 }

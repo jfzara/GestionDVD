@@ -35,7 +35,9 @@ namespace Zara_GestionDVD.Models
         public string DescriptionSuppléments { get; set; }
 
         [Required(ErrorMessage = "La durée est requise.")]
-        public TimeSpan Duree { get; set; }
+        // Propriétés pour la durée
+        public int DureeHeures { get; set; } // En heures
+        public int DureeMinutes { get; set; } // En minutes (0-59)
 
         public bool EstDVDOriginal { get; set; }
 

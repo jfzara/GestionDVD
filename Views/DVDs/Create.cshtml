@@ -59,9 +59,13 @@
                 <span asp-validation-for="DescriptionSuppléments" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Duree" class="control-label"></label>
-                <input asp-for="Duree" class="form-control" />
-                <span asp-validation-for="Duree" class="text-danger"></span>
+                <label>Duree (heures et minutes)</label>
+                <div class="d-flex">
+                    <input type="number" name="DureeHeures" class="form-control" placeholder="Heures" min="0" />
+                    <input type="number" name="DureeMinutes" class="form-control" placeholder="Minutes" min="0" max="59" />
+                </div>
+                <span class="text-danger" asp-validation-for="DureeHeures"></span>
+                <span class="text-danger" asp-validation-for="DureeMinutes"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">

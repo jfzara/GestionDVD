@@ -2,22 +2,37 @@
 
 <h2>Connexion</h2>
 
-<form asp-action="Login" method="post">
-    <div>
-        <label asp-for="Courriel"></label>
-        <input asp-for="Courriel" />
-        <span asp-validation-for="Courriel"></span>
+<form asp-action="Login" method="post" class="form-group">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Courriel" class="form-label"></label>
+        <input asp-for="Courriel" class="form-control" />
+        <span asp-validation-for="Courriel" class="text-danger"></span>
     </div>
-    <div>
-        <label asp-for="MotDePasse"></label>
-        <input asp-for="MotDePasse" />
-        <span asp-validation-for="MotDePasse"></span>
+
+    <div class="form-group">
+        <label asp-for="MotDePasse" class="form-label"></label>
+        <input asp-for="MotDePasse" class="form-control" type="password" />
+        <span asp-validation-for="MotDePasse" class="text-danger"></span>
     </div>
-    <div>
-        <label asp-for="ResterConnecte"></label>
-        <input asp-for="ResterConnecte" type="checkbox" />
+
+    <div class="form-check">
+        <input asp-for="ResterConnecte" class="form-check-input" type="checkbox" />
+        <label asp-for="ResterConnecte" class="form-check-label"></label>
     </div>
-    <button type="submit">Connexion</button>
+
+    <button type="submit" class="btn btn-primary">Connexion</button>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="text-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                @error.ErrorMessage <br />
+            }
+        </div>
+    }
 </form>
 
 <div>

@@ -41,9 +41,9 @@ app.MapControllerRoute(
     defaults: new { controller = "Account", action = "Login" }
 );
 
-// Route par défaut
+// Route par défaut vers la page de connexion
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=DVDs}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}"); // Modifié ici
 
 app.Run();

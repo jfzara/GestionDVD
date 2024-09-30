@@ -54,11 +54,11 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DescriptionSuppléments)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Duree)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DureeHeures)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Duree)
+        <dd class="col-sm-10">
+            @Model.DureeHeures heures @Model.DureeMinutes minutes
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.EstDVDOriginal)
@@ -144,6 +144,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a class="btn btn-secondary" asp-action="Index">Retour à la liste</a>
     </form>
 </div>

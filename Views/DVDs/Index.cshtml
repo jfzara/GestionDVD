@@ -5,11 +5,11 @@
     Layout = "_Layout";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a class="btn btn-primary" asp-action="Create">Créer Nouveau</a>
-</p>
+
+<h1>
+    <a asp-controller="DVDs" asp-action="Create" class="btn btn-primary">Créer nouveau DVD</a>
+</h1>
 
 <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -42,7 +42,7 @@
                         <div class="collapse" id="details-@item.Id">
                             <div class="card card-body">
                                 <strong>Description : </strong>@Html.DisplayFor(modelItem => item.DescriptionSuppléments) <br />
-                                <strong>Duree : </strong>@Html.DisplayFor(modelItem => item.Duree) <br />
+                                <strong>Duree : </strong>@item.DureeHeures heures @item.DureeMinutes minutes <br />
                                 <strong>Format : </strong>@Html.DisplayFor(modelItem => item.Format) <br />
                                 <strong>Langues : </strong>@Html.DisplayFor(modelItem => item.LanguesDisponibles) <br />
                                 <strong>Acteurs : </strong>@Html.DisplayFor(modelItem => item.ActeursPrincipaux) <br />
