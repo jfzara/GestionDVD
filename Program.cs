@@ -34,6 +34,14 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Configurer les routes pour le contrôleur Account
+app.MapControllerRoute(
+    name: "account",
+    pattern: "Account/{action=Login}/{id?}",
+    defaults: new { controller = "Account", action = "Login" }
+);
+
+// Route par défaut
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=DVDs}/{action=Index}/{id?}");

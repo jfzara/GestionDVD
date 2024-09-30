@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jeff/Downloads/20240926211059_Zara_GestionDVD_Projet (1)/Zara_GestionDVD_Projet/Views/DVDs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFZEc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -11,8 +11,8 @@ using Zara_GestionDVD.Data;
 namespace Zara_GestionDVD.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240929235453_AjoutIdentity")]
-    partial class AjoutIdentity
+    [Migration("20240930003414_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

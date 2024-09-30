@@ -1,0 +1,21 @@
+﻿@model Zara_GestionDVD.ViewModels.LoginViewModel
+
+<h2>Connexion</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label asp-for="Courriel"></label>
+        <input asp-for="Courriel" />
+        <span asp-validation-for="Courriel"></span>
+    </div>
+    <div>
+        <label asp-for="MotDePasse"></label>
+        <input asp-for="MotDePasse" />
+        <span asp-validation-for="MotDePasse"></span>
+    </div>
+    <div>
+        <label asp-for="ResterConnecte"></label>
+        <input asp-for="ResterConnecte" type="checkbox" />
+    </div>
+    <button type="submit">Connexion</button>
+</form>

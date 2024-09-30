@@ -1,0 +1,27 @@
+﻿@model Zara_GestionDVD.ViewModels.RegisterViewModel
+
+<h2>Inscription</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Prenom"></label>
+        <input asp-for="Prenom" />
+        <span asp-validation-for="Prenom"></span>
+    </div>
+    <div>
+        <label asp-for="Courriel"></label>
+        <input asp-for="Courriel" />
+        <span asp-validation-for="Courriel"></span>
+    </div>
+    <div>
+        <label asp-for="MotDePasse"></label>
+        <input asp-for="MotDePasse" />
+        <span asp-validation-for="MotDePasse"></span>
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <button type="submit">Inscription</button>
+</form>
