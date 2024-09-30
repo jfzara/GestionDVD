@@ -1136,6 +1136,15 @@ C:\Users\Jeff\Desktop\Zara_GestionDVD_Projet\obj\Debug\net8.0\refint\Zara_Gestio
 C:\Users\Jeff\Desktop\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.pdb
 C:\Users\Jeff\Desktop\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.genruntimeconfig.cache
 C:\Users\Jeff\Desktop\Zara_GestionDVD_Projet\obj\Debug\net8.0\ref\Zara_GestionDVD.dll
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.csproj.AssemblyReference.cache
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.AssemblyInfoInputs.cache
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.AssemblyInfo.cs
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.csproj.CoreCompileInputs.cache
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.RazorAssemblyInfo.cache
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.RazorAssemblyInfo.cs
+C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.sourcelink.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\appsettings.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\Zara_GestionDVD.staticwebassets.runtime.json
@@ -1396,15 +1405,6 @@ C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDV
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.csproj.AssemblyReference.cache
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.AssemblyInfoInputs.cache
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.AssemblyInfo.cs
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.csproj.CoreCompileInputs.cache
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.RazorAssemblyInfo.cache
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.RazorAssemblyInfo.cs
-C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\Zara_GestionDVD.sourcelink.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Jeff\Downloads\20240926211059_Zara_GestionDVD_Projet (1)\Zara_GestionDVD_Projet\obj\Debug\net8.0\staticwebassets\msbuild.Zara_GestionDVD.Microsoft.AspNetCore.StaticWebAssets.props

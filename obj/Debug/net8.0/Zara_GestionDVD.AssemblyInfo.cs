@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Zara_GestionDVD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+890002b18d6e92f2a12878e70454be6488e531f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c517fe450de5e79b4b72ecabc67dd17d46a799dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Zara_GestionDVD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Zara_GestionDVD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

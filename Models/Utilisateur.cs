@@ -6,7 +6,10 @@ namespace Zara_GestionDVD.Models
     public class Utilisateur : IdentityUser
     {
         public string Prenom { get; set; }
+        
         public bool NotificationsActives { get; set; }
-        public List<DVD> DVDsPossedes { get; set; }
+        
+        // Change List<DVD> to ICollection<DVD>
+        public ICollection<DVD> DVDsPossedes { get; set; } = new List<DVD>();
     }
 }

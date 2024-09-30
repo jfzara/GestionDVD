@@ -14,7 +14,7 @@ public class AccountController : Controller
         _signInManager = signInManager;
     }
 
-    // Page d'inscription
+    // Page d'inscription 
     [HttpGet]
     public IActionResult Register() => View();
 
@@ -26,9 +26,10 @@ public class AccountController : Controller
             var user = new Utilisateur
             {
                 UserName = model.Courriel,
-                Email = model.Courriel, // Utilisez Email au lieu de Courriel
+                Email = model.Courriel,
                 Prenom = model.Prenom
             };
+
             var result = await _userManager.CreateAsync(user, model.MotDePasse);
 
             if (result.Succeeded)
@@ -42,8 +43,21 @@ public class AccountController : Controller
                 ModelState.AddModelError(string.Empty, error.Description);
             }
         }
+        else
+        {
+            // Vérifiez les erreurs du modèle et affichez-les dans la console
+            var errors = ModelState.Values.SelectMany(v => v.Errors);
+            foreach (var error in errors)
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+        }
+
         return View(model);
     }
+
+
+
 
     // Page de connexion
     [HttpGet]
