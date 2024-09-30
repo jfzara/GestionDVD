@@ -59,7 +59,6 @@ namespace Zara_GestionDVD.Controllers
                 ModelState.AddModelError("Categorie", "La catégorie sélectionnée n'est pas valide.");
             }
 
-        
             if (dVD.Duree.TotalMinutes <= 0)
             {
                 ModelState.AddModelError("Duree", "La durée doit être supérieure à zéro minutes.");
@@ -75,6 +74,7 @@ namespace Zara_GestionDVD.Controllers
             ViewBag.Categories = GetCategories();
             return View(dVD);
         }
+
 
         private List<SelectListItem> GetCategories()
         {
@@ -154,17 +154,11 @@ namespace Zara_GestionDVD.Controllers
         // POST: DVDs/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TitreFrancais,TitreOriginal,AnneeSortie,Categorie,DerniereMiseAJour,DerniereMiseAJourPar,DescriptionSuppléments,Duree,EstDVDOriginal,Format,ImagePochette,LanguesDisponibles,NombreDisques,NomProducteur,NomRealisateur,ActeursPrincipaux,ResumeFilm,SousTitresDisponibles,PropriétaireId,EmprunteurId,VersionEtendue,VisibleATous")] DVD dVD)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TitreFrancais,TitreOriginal,AnneeSortie,Categorie,DerniereMiseAJour,DerniereMiseAJourPar,DescriptionSuppléments,Duree,EstDVDOriginal,Format,LanguesDisponibles,NombreDisques,NomProducteur,NomRealisateur,ActeursPrincipaux,ResumeFilm,SousTitresDisponibles,PropriétaireId,EmprunteurId,VersionEtendue,VisibleATous")] DVD dVD)
         {
             if (id != dVD.Id)
             {
                 return NotFound();
-            }
-
-            // Vérifiez si la catégorie est valide
-            if (!GetCategories().Any(c => c.Value == dVD.Categorie))
-            {
-                ModelState.AddModelError("Categorie", "La catégorie sélectionnée n'est pas valide.");
             }
 
             if (ModelState.IsValid)
@@ -187,8 +181,14 @@ namespace Zara_GestionDVD.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             ViewBag.Categories = GetCategories();
             return View(dVD);
+        }
+
+        private bool DVDExists(int id)
+        {
+            return _context.DVDs.Any(e => e.Id == id);
         }
 
         // GET: DVDs/Delete/5
@@ -219,9 +219,6 @@ namespace Zara_GestionDVD.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DVDExists(int id)
-        {
-            return _context.DVDs.Any(e => e.Id == id);
-        }
+       
     }
 }
